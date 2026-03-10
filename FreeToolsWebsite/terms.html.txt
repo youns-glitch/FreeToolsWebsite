@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+<div class="logo">FreeTools</div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="tools.html">Tools</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<div class="container">
+<h1>Terms of Service</h1>
+<p>By using this website, you agree to the following terms:</p>
+<ul>
+<li>All tools are provided as-is.</li>
+<li>We are not responsible for any incorrect calculations or results.</li>
+<li>You agree not to misuse the website or its content.</li>
+</ul>
+</div>
+
+<footer>
+<a href="privacy.html">Privacy Policy</a> |
+<a href="terms.html">Terms of Service</a>
+<p>© 2026 FreeTools</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator Tool</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.container{
+    background:white;
+    max-width:700px;
+    margin:auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    text-align:center;
+    margin-top:40px;
+}
+
+input{
+    width:80%;
+    padding:10px;
+    margin:10px 0;
+    font-size:16px;
+}
+
+button{
+    margin-top:10px;
+    padding:10px 20px;
+    background:#0077ff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.result{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Age Calculator</h1>
+<p>Select your birth date:</p>
+
+<input type="date" id="birthdate">
+<br>
+<button onclick="calculateAge()">Calculate Age</button>
+
+<div class="result" id="result"></div>
+</div>
+
+<script>
+function calculateAge(){
+    let birthdate = document.getElementById("birthdate").value;
+    if(!birthdate){
+        document.getElementById("result").innerText = "Please select your birth date!";
+        return;
+    }
+    let today = new Date();
+    let birth = new Date(birthdate);
+    let age = today.getFullYear() - birth.getFullYear();
+    let m = today.getMonth() - birth.getMonth();
+    if(m < 0 || (m === 0 && today.getDate() < birth.getDate())){
+        age--;
+    }
+    document.getElementById("result").innerText = "Your Age: " + age + " years";
+}
+</script>
+
+</body>
+</html>

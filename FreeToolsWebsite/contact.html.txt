@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+<div class="logo">FreeTools</div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="tools.html">Tools</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<div class="container">
+<h1>Contact Us</h1>
+<p>If you have any questions or suggestions, feel free to contact us:</p>
+<form>
+<input type="text" placeholder="Your Name" required><br>
+<input type="email" placeholder="Your Email" required><br>
+<textarea placeholder="Your Message" rows="5" required></textarea><br>
+<button type="submit">Send Message</button>
+</form>
+</div>
+
+<footer>
+<a href="privacy.html">Privacy Policy</a> |
+<a href="terms.html">Terms of Service</a>
+<p>© 2026 FreeTools</p>
+</footer>
+
+</body>
+</html>

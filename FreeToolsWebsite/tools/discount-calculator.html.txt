@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discount Calculator Tool</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.container{
+    background:white;
+    max-width:700px;
+    margin:auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    text-align:center;
+    margin-top:40px;
+}
+
+input{
+    width:80%;
+    padding:10px;
+    margin:10px 0;
+    font-size:16px;
+}
+
+button{
+    margin-top:10px;
+    padding:10px 20px;
+    background:#0077ff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.result{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Discount Calculator</h1>
+<p>Enter price and discount percentage:</p>
+
+<input type="number" id="price" placeholder="Original Price">
+<br>
+<input type="number" id="discount" placeholder="Discount %">
+<br>
+<button onclick="calculateDiscount()">Calculate</button>
+
+<div class="result" id="result"></div>
+</div>
+
+<script>
+function calculateDiscount(){
+    let price = parseFloat(document.getElementById("price").value);
+    let discount = parseFloat(document.getElementById("discount").value);
+    if(isNaN(price) || isNaN(discount)){
+        document.getElementById("result").innerText = "Please enter valid numbers!";
+        return;
+    }
+    let finalPrice = price - (price * discount / 100);
+    document.getElementById("result").innerText = "Final Price: $" + finalPrice.toFixed(2);
+}
+</script>
+
+</body>
+</html>
